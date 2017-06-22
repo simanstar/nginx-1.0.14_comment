@@ -8,6 +8,7 @@
 #include <ngx_config.h>
 #include <ngx_core.h>
 #include <ngx_http.h>
+#include "../../event/ngx_event_connect.h"
 
 
 typedef struct {

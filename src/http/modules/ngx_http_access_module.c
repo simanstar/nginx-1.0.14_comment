@@ -10,6 +10,7 @@
 #include <ngx_http.h>
 
 
+
 typedef struct {
     in_addr_t         mask;
     in_addr_t         addr;
@@ -35,8 +36,7 @@ typedef struct {
 
 
 static ngx_int_t ngx_http_access_handler(ngx_http_request_t *r);
-static ngx_int_t ngx_http_access_inet(ngx_http_request_t *r,
-    ngx_http_access_loc_conf_t *alcf, in_addr_t addr);
+static ngx_int_t ngx_http_access_inet(ngx_http_request_t *r, ngx_http_access_loc_conf_t *alcf, in_addr_t addr);
 #if (NGX_HAVE_INET6)
 static ngx_int_t ngx_http_access_inet6(ngx_http_request_t *r,
     ngx_http_access_loc_conf_t *alcf, u_char *p);

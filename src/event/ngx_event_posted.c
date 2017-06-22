@@ -22,7 +22,7 @@ void
 ngx_event_process_posted(ngx_cycle_t *cycle,
     ngx_thread_volatile ngx_event_t **posted)
 {
-    ngx_event_t  *ev;
+    ngx_thread_volatile ngx_event_t  *ev;
 
     for ( ;; ) {
 

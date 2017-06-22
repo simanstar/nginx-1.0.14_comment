@@ -75,7 +75,7 @@
 
 #endif
 
-//Ó³Éä»ù±¾µÄÊý¾ÝÀàÐÍ
+//Ó³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 typedef intptr_t        ngx_int_t;
 typedef uintptr_t       ngx_uint_t;
 typedef intptr_t        ngx_flag_t;

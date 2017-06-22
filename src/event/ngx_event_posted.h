@@ -13,7 +13,8 @@
 #include <ngx_core.h>
 #include <ngx_event.h>
 
-
+extern ngx_thread_volatile ngx_event_t  *ngx_posted_accept_events;
+extern ngx_thread_volatile ngx_event_t  *ngx_posted_events;
 #if (NGX_THREADS)
 extern ngx_mutex_t  *ngx_posted_events_mutex;
 #endif
@@ -68,8 +69,7 @@ ngx_int_t ngx_event_thread_process_posted(ngx_cycle_t *cycle);
 #endif
 
 
-extern ngx_thread_volatile ngx_event_t  *ngx_posted_accept_events;
-extern ngx_thread_volatile ngx_event_t  *ngx_posted_events;
+
 
 
 #endif /* _NGX_EVENT_POSTED_H_INCLUDED_ */
