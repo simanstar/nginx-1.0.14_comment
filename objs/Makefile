@@ -96,6 +96,9 @@ HTTP_INCS = -I src/http \
 	-I src/http/modules
 
 
+ADDON_DEPS = $(CORE_DEPS)  $(HTTP_DEPS)
+
+
 objs/nginx:	objs/src/core/nginx.o \
 	objs/src/core/ngx_log.o \
 	objs/src/core/ngx_palloc.o \
@@ -200,6 +203,8 @@ objs/nginx:	objs/src/core/nginx.o \
 	objs/src/http/modules/ngx_http_empty_gif_module.o \
 	objs/src/http/modules/ngx_http_browser_module.o \
 	objs/src/http/modules/ngx_http_upstream_ip_hash_module.o \
+	objs/addon/my_test_modules/ngx_http_myupstream_module.o \
+	objs/addon/my_test_modules/ngx_http_mytest_module.o \
 	objs/ngx_modules.o
 
 	$(LINK) -o objs/nginx \
@@ -307,6 +312,8 @@ objs/nginx:	objs/src/core/nginx.o \
 	objs/src/http/modules/ngx_http_empty_gif_module.o \
 	objs/src/http/modules/ngx_http_browser_module.o \
 	objs/src/http/modules/ngx_http_upstream_ip_hash_module.o \
+	objs/addon/my_test_modules/ngx_http_myupstream_module.o \
+	objs/addon/my_test_modules/ngx_http_mytest_module.o \
 	objs/ngx_modules.o \
 	-lpthread -lcrypt -lpcre -lcrypto -lcrypto -lz
 	
@@ -1045,6 +1052,20 @@ objs/src/http/modules/ngx_http_upstream_ip_hash_module.o:	$(CORE_DEPS) $(HTTP_DE
 	$(CC) -c $(CFLAGS) $(CORE_INCS) $(HTTP_INCS) \
 		-o objs/src/http/modules/ngx_http_upstream_ip_hash_module.o \
 		src/http/modules/ngx_http_upstream_ip_hash_module.c
+
+
+objs/addon/my_test_modules/ngx_http_myupstream_module.o:	$(ADDON_DEPS) \
+	/home/ison/CLionProjects/nginx-1.0.14_comment/my_test_modules/ngx_http_myupstream_module.c
+	$(CC) -c $(CFLAGS)  $(ALL_INCS) \
+		-o objs/addon/my_test_modules/ngx_http_myupstream_module.o \
+		/home/ison/CLionProjects/nginx-1.0.14_comment/my_test_modules/ngx_http_myupstream_module.c
+
+
+objs/addon/my_test_modules/ngx_http_mytest_module.o:	$(ADDON_DEPS) \
+	/home/ison/CLionProjects/nginx-1.0.14_comment/my_test_modules/ngx_http_mytest_module.c
+	$(CC) -c $(CFLAGS)  $(ALL_INCS) \
+		-o objs/addon/my_test_modules/ngx_http_mytest_module.o \
+		/home/ison/CLionProjects/nginx-1.0.14_comment/my_test_modules/ngx_http_mytest_module.c
 
 
 manpage:	objs/nginx.8

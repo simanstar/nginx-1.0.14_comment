@@ -1,3 +1,5 @@
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pipe  -O -W -Wall -Wpointer-arith -Wno-unused-parameter -Wunused-function -Wunused-variable -Wunused-value -Werror -g ")
+
 set(SOURCE_FILES ngx_atomic.h
 		ngx_aio_read_chain.c
 		ngx_channel.c
@@ -66,4 +68,4 @@ set(SOURCE_FILES ngx_atomic.h
 		ngx_user.h
 		rfork_thread.S)
 add_executable(unix ${SOURCE_FILES})
-include_directories(. ../../core ../../../objs)
+include_directories(. ../../core ../../../objs ../../event)

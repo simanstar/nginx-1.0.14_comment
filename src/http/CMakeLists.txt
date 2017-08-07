@@ -26,5 +26,5 @@ set(SOURCE_FILES ngx_http.c
 		ngx_http_variables.c
 		ngx_http_write_filter_module.c)
 add_executable(http ${SOURCE_FILES})
-include_directories(. ../core ../event)
+include_directories(. ../core ../event ../os/unix)
 add_subdirectory(modules)

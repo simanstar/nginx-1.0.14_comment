@@ -14,5 +14,6 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 set(SOURCE_FILES configure)
 
 add_subdirectory(src)
+add_subdirectory(my_test_modules)
 link_directories(${PROJECT_SOURCE_DIR}/src)
 

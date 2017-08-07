@@ -60,6 +60,6 @@ set(SOURCE_FILES ngx_conf_file.c
 		ngx_times.c
 		ngx_times.h)
 add_executable(core ${SOURCE_FILES})
-target_link_libraries(core os)
+target_link_libraries(core )
 include_directories(. ../os/unix ../event ../../objs)
 link_directories(${PROJECT_SOURCE_DIR}/objs/src)

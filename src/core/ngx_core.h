@@ -7,10 +7,10 @@
 
 #ifndef _NGX_CORE_H_INCLUDED_
 #define _NGX_CORE_H_INCLUDED_
-//新加
-#define NULL 0//C转成c++11格式
-#include <netinet/in.h>
-//新加结束
+////新加
+//#define NULL 0//C转成c++11格式
+//#include <netinet/in.h>
+////新加结束
 typedef struct ngx_module_s      ngx_module_t;
 typedef struct ngx_conf_s        ngx_conf_t;
 typedef struct ngx_cycle_s       ngx_cycle_t;

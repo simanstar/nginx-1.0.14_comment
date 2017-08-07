@@ -1,0 +1,1 @@
+/usr/bin/cc  -g   CMakeFiles/myupstream_module.dir/ngx_http_myupstream_module.c.o CMakeFiles/myupstream_module.dir/ngx_http_mytest_module.c.o  -o ../../bin/myupstream_module -rdynamic 

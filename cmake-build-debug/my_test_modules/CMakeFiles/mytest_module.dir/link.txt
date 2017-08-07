@@ -1,0 +1,1 @@
+/usr/bin/cc  -g   CMakeFiles/mytest_module.dir/ngx_http_mytest_module.c.o  -o ../../bin/mytest_module -rdynamic 
