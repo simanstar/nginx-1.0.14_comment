@@ -4,7 +4,7 @@
     <file url="file://$PROJECT_DIR$/src/core/nginx.c" charset="GB18030" />
     <file url="file://$PROJECT_DIR$/src/core/ngx_array.c" charset="GB18030" />
     <file url="file://$PROJECT_DIR$/src/core/ngx_config.h" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/core/ngx_cycle.c" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/core/ngx_cycle.c" charset="US-ASCII" />
     <file url="file://$PROJECT_DIR$/src/core/ngx_palloc.c" charset="GB18030" />
     <file url="file://$PROJECT_DIR$/src/core/ngx_string.c" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/event/ngx_event.c" charset="GB18030" />
@@ -14,5 +14,6 @@
     <file url="file://$PROJECT_DIR$/src/http/ngx_http_request.c" charset="GB18030" />
     <file url="file://$PROJECT_DIR$/src/http/ngx_http_variables.h" charset="GB18030" />
     <file url="file://$PROJECT_DIR$/src/http/ngx_http_write_filter_module.c" charset="GB18030" />
+    <file url="file://$PROJECT_DIR$/src/os/unix/ngx_process_cycle.c" charset="US-ASCII" />
   </component>
 </project>
